@@ -1,0 +1,22 @@
+<?php
+
+namespace {%namespace%};
+
+use {%userModel%};
+
+trait {%className%}
+{
+    // 设置当前模型对应的完整数据表名称
+    public static $tableName{%databaseTableHump%} = '{%tableName%}';
+    // 设置数据库表别名
+    public static $tableAlias{%databaseTableHump%} = '{%databaseTable%}';
+
+    public static ${%databaseTableHumpFirstLower%}Model;
+
+    public static function get{%databaseTableHump%}Model(){
+        if (self::${%databaseTableHumpFirstLower%}Model == null) {
+            return self::${%databaseTableHumpFirstLower%}Model = new {%modelName%}();
+        }
+        return self::${%databaseTableHumpFirstLower%}Model;
+    }
+}

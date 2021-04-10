@@ -1,0 +1,17 @@
+<?php
+
+namespace {%namespace%};
+
+use {%traitFilePath%};
+use app\user\logic\CommonLogic;
+
+class {%className%} extends CommonLogic
+{
+    use {%traitFile%};
+
+    protected $Model;
+    public function __construct()
+    {
+        $this->Model = self::get{%databaseTableHump%}Model();
+    }
+}

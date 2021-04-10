@@ -1,0 +1,24 @@
+<?php
+
+namespace {%namespace%};
+
+class {%className%}
+{
+    //{%tableComment%}
+    protected $table = '{%tableName%}';
+
+    protected $pk = 'id';
+
+    protected $schema = [
+{%types%}
+    ];
+
+    protected $type = [
+{%types%}
+    ];
+
+        // 设置只读字段
+    protected $readonly = [{%readonly%}];
+
+    protected $cacheName = [];
+}
