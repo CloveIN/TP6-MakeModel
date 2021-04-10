@@ -1,0 +1,13 @@
+<?php
+
+namespace {%namespace%};
+
+use think\Facade;
+
+class {%className%} extends Facade
+{
+    protected static function getFacadeClass()
+    {
+        return '{%logicFile%}';
+    }
+}
